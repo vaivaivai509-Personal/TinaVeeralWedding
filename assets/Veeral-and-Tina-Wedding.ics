@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Veeral and Tina//Wedding Invitation//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:veeral-tina-celebrations-20261201@wedding.invitation
+DTSTAMP:20260923T000000Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261203
+SUMMARY:Veeral & Tina — Wedding Celebrations
+LOCATION:Miraya Crown Banquet\, PKS Town Central\, Sec 16B Road\, Greater 
+ Noida West\, Uttar Pradesh 201308
+DESCRIPTION:1 December: Sagai 9:00 AM onwards\; Lunch 1:15 PM onwards\; Ha
+ ldi & Mehendi 1:30 PM onwards (Rosette Hall). Sangeet 6:30 PM onwards (Cl
+ ub Noir).\n2 December: Ghurchari 4:00 PM\; Chadhat 5:30 PM\; Baraat 8:00 
+ PM (Miraya Crown Hotel Entrance). Wedding Ceremony: Pheras / Muhurat to b
+ e updated\; Dinner 8:00 PM onwards (Celeste Hall).\nAll times India Stand
+ ard Time. RSVP: Vaibhav Kumar\, +91 7017710317.
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
