@@ -9,9 +9,11 @@
   <link rel="icon" href="assets/monogram.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/lmroman17-regular.otf" as="font" type="font/otf" crossorigin>
   <link rel="stylesheet" href="assets/invitation.css">
+  <link rel="stylesheet" href="assets/rose-timeline.css">
   <script>document.documentElement.classList.add('js');</script>
   <script src="assets/invitation.js" defer></script>
   <script src="assets/celebration.js" defer></script>
+  <script src="assets/rose-timeline.js" defer></script>
 </head>
 <body class="sealed date-locked">
   <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -144,38 +146,93 @@
         </div>
       </section>
 
-      <section class="celebrations paper" id="celebrations" aria-labelledby="celebrationsTitle">
-        <div class="celebrations-layout wrap">
-          <div class="celebrations-intro" data-reveal="up">
-            <p class="eyebrow">THE CELEBRATION</p>
-            <h2 id="celebrationsTitle">Two days.<br><em>A lifetime<br>of memories.</em></h2>
-            <p class="body-copy">Come for the rituals.<br>Stay for the laughter.<br>Dance with us into forever.</p>
-            <div class="event-days"><span>01</span><i>&amp;</i><span>02</span><small>DECEMBER 2026</small></div>
-            <svg class="lotus" aria-hidden="true"><use href="#i-lotus"/></svg>
+      <section class="celebrations paper rose-celebrations" id="celebrations" aria-labelledby="celebrationsTitle">
+        <div class="rose-intro wrap" data-reveal="up">
+          <svg class="lotus" aria-hidden="true"><use href="#i-lotus"/></svg>
+          <p class="eyebrow">THE CELEBRATION · 1 &amp; 2 DECEMBER 2026</p>
+          <h2 id="celebrationsTitle">Two days.<br><em>A lifetime of memories.</em></h2>
+          <p class="body-copy">Come for the rituals. Stay for the laughter.<br>Dance with us into forever.</p>
+          <p class="rose-scroll-hint"><span aria-hidden="true">✧</span> Follow the rose through our celebrations <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></p>
+        </div>
+
+        <div class="rose-schedule wrap">
+          <div class="rose-paper-ornament" aria-hidden="true">✧</div>
+          <div class="rose-track" id="roseTrack">
+            <div class="rose-rail" id="roseRail" aria-hidden="true"><span id="roseRailFill"></span></div>
+            <div class="rose-rider" id="roseRider" aria-hidden="true">
+              <span class="rose-halo"></span>
+              <span class="rose-orbit"></span>
+              <span class="rose-spark rose-spark-one">✧</span>
+              <span class="rose-spark rose-spark-two">✦</span>
+              <img class="rose-bloom" src="assets/red-rose.png" alt="" width="1254" height="1254" draggable="false">
+            </div>
+
+            <div class="rose-day-group" role="group" aria-labelledby="roseDayOne">
+              <header class="rose-day">
+                <p class="rose-day-date"><strong>01</strong><span>DECEMBER 2026</span><small>TUESDAY</small></p>
+                <span class="rose-day-jewel" aria-hidden="true">✦</span>
+                <div class="rose-day-copy"><p class="rose-overline">THE FIRST CHAPTER</p><h3 id="roseDayOne">A beautiful<br><em>beginning.</em></h3></div>
+              </header>
+              <ol class="rose-events" aria-label="Functions on 1 December 2026">
+                <li class="rose-event">
+                  <div class="rose-time"><time datetime="2026-12-01T09:00:00+05:30">9:00 <span>AM</span></time><small>onwards</small></div>
+                  <span class="rose-marker" aria-hidden="true"></span>
+                  <div class="rose-details"><h4>Sagai</h4><p>Rosette Hall</p></div>
+                </li>
+                <li class="rose-event">
+                  <div class="rose-time"><time datetime="2026-12-01T13:15:00+05:30">1:15 <span>PM</span></time><small>onwards</small></div>
+                  <span class="rose-marker" aria-hidden="true"></span>
+                  <div class="rose-details"><h4>Lunch</h4><p>Rosette Hall</p></div>
+                </li>
+                <li class="rose-event">
+                  <div class="rose-time"><time datetime="2026-12-01T13:30:00+05:30">1:30 <span>PM</span></time><small>onwards</small></div>
+                  <span class="rose-marker" aria-hidden="true"></span>
+                  <div class="rose-details"><h4>Haldi &amp;<br>Mehendi</h4><p>Rosette Hall</p></div>
+                </li>
+                <li class="rose-event rose-event-evening">
+                  <div class="rose-time"><time datetime="2026-12-01T18:30:00+05:30">6:30 <span>PM</span></time><small>onwards</small></div>
+                  <span class="rose-marker" aria-hidden="true"></span>
+                  <div class="rose-details"><h4>Sangeet</h4><p>Club Noir</p></div>
+                </li>
+              </ol>
+            </div>
+
+            <div class="rose-day-group" role="group" aria-labelledby="roseDayTwo">
+              <header class="rose-day rose-day-second">
+                <p class="rose-day-date"><strong>02</strong><span>DECEMBER 2026</span><small>WEDNESDAY</small></p>
+                <span class="rose-day-jewel" aria-hidden="true">✦</span>
+                <div class="rose-day-copy"><p class="rose-overline">THE WEDDING DAY</p><h3 id="roseDayTwo">Our happily<br><em>ever after.</em></h3></div>
+              </header>
+              <ol class="rose-events" aria-label="Functions on 2 December 2026">
+                <li class="rose-event">
+                  <div class="rose-time"><time datetime="2026-12-02T16:00:00+05:30">4:00 <span>PM</span></time></div>
+                  <span class="rose-marker" aria-hidden="true"></span>
+                  <div class="rose-details"><h4>Ghurchari</h4><p>Miraya Crown<br>Hotel Entrance</p></div>
+                </li>
+                <li class="rose-event">
+                  <div class="rose-time"><time datetime="2026-12-02T17:30:00+05:30">5:30 <span>PM</span></time></div>
+                  <span class="rose-marker" aria-hidden="true"></span>
+                  <div class="rose-details"><h4>Chadhat</h4><p>Miraya Crown<br>Hotel Entrance</p></div>
+                </li>
+                <li class="rose-event">
+                  <div class="rose-time"><time datetime="2026-12-02T20:00:00+05:30">8:00 <span>PM</span></time></div>
+                  <span class="rose-marker" aria-hidden="true"></span>
+                  <div class="rose-details"><h4>Baraat</h4><p>Miraya Crown<br>Hotel Entrance</p></div>
+                </li>
+                <li class="rose-event rose-event-ceremony">
+                  <div class="rose-time rose-time-pending"><span class="rose-pending-label">Muhurat</span><small>To be updated</small></div>
+                  <span class="rose-marker" aria-hidden="true"></span>
+                  <div class="rose-details"><h4>Wedding<br>Ceremony</h4><p>Celeste Hall</p><p class="rose-event-note">Pheras / Muhurat — To be updated</p></div>
+                </li>
+                <li class="rose-event">
+                  <div class="rose-time"><time datetime="2026-12-02T20:00:00+05:30">8:00 <span>PM</span></time><small>onwards</small></div>
+                  <span class="rose-marker" aria-hidden="true"></span>
+                  <div class="rose-details"><h4>Dinner</h4><p>Celeste Hall</p></div>
+                </li>
+              </ol>
+            </div>
           </div>
-          <div class="event-stack">
-            <article class="event-sheet day-sheet" data-reveal="up">
-              <header class="event-sheet-header"><span class="chapter-number">01</span><div><p class="eyebrow">TUESDAY · 1 DECEMBER 2026</p><h3>A beautiful beginning</h3><p class="event-subtitle">DAY FUNCTIONS · ROSETTE HALL</p></div></header>
-              <div class="event-row"><span class="event-dot" aria-hidden="true">✧</span><div><h4>Sagai</h4><p>Rosette Hall</p></div><time>9:00 AM<span>onwards</span></time></div>
-              <div class="event-row"><span class="event-dot" aria-hidden="true">✧</span><div><h4>Lunch</h4><p>Rosette Hall</p></div><time>1:15 PM<span>onwards</span></time></div>
-              <div class="event-row"><span class="event-dot" aria-hidden="true">✧</span><div><h4>Haldi &amp; Mehendi</h4><p>Rosette Hall</p></div><time>1:30 PM<span>onwards</span></time></div>
-              <p class="sheet-footer">A little colour. A whole lot of love.</p>
-            </article>
-            <article class="event-sheet sangeet-sheet night" data-reveal="up">
-              <div class="sangeet-stars" aria-hidden="true">✧<span>✦</span>✧</div>
-              <p class="eyebrow">TUESDAY · 1 DECEMBER 2026</p><h3>A night to<br><em>remember.</em></h3>
-              <div class="sangeet-name">Sangeet</div><p class="sangeet-time">6:30 PM onwards</p><p class="event-subtitle">CLUB NOIR</p>
-              <div class="fine-rule"><span>✧</span></div><p class="sheet-footer">Bring your best moves. We'll bring the magic.</p>
-            </article>
-            <article class="event-sheet wedding-sheet" data-reveal="up">
-              <header class="event-sheet-header"><span class="chapter-number">02</span><div><p class="eyebrow">WEDNESDAY · 2 DECEMBER 2026</p><h3>Our happily ever after</h3><p class="event-subtitle">THE WEDDING DAY</p></div></header>
-              <div class="event-row"><span class="event-dot" aria-hidden="true">✧</span><div><h4>Ghurchari</h4><p>Miraya Crown Hotel Entrance</p></div><time>4:00 PM</time></div>
-              <div class="event-row"><span class="event-dot" aria-hidden="true">✧</span><div><h4>Chadhat</h4><p>Miraya Crown Hotel Entrance</p></div><time>5:30 PM</time></div>
-              <div class="event-row"><span class="event-dot" aria-hidden="true">✧</span><div><h4>Baraat</h4><p>Miraya Crown Hotel Entrance</p></div><time>8:00 PM</time></div>
-              <div class="event-row ceremony-row"><span class="event-dot" aria-hidden="true">✧</span><div><h4>Wedding Ceremony</h4><p>Celeste Hall</p><p class="pending-time">Pheras / Muhurat — To be updated</p></div></div>
-              <div class="event-row"><span class="event-dot" aria-hidden="true">✧</span><div><h4>Dinner</h4><p>Celeste Hall</p></div><time>8:00 PM<span>onwards</span></time></div>
-            </article>
-          </div>
+          <div class="rose-schedule-footer"><span aria-hidden="true">✧</span><p>A little colour. A whole lot of love.<br>And memories to last forever.</p><span aria-hidden="true">✧</span></div>
         </div>
       </section>
 
