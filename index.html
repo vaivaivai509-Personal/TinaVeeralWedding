@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#4b1025">
+  <meta name="description" content="With love, Veeral & Tina invite you to their wedding celebrations on 1–2 December 2026 in Greater Noida.">
+  <title>Veeral & Tina | Maroon &amp; Gold Wedding Invitation</title>
+  <link rel="icon" href="assets/monogram.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/lmroman17-regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="stylesheet" href="assets/invitation.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="assets/invitation.js" defer></script>
+  <script src="assets/celebration.js" defer></script>
+</head>
+<body class="sealed">
+  <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+      <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v16m-6-6 6 6 6-6"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20S3 14.5 3 8.5A4.7 4.7 0 0 1 12 6a4.7 4.7 0 0 1 9 2.5C21 14.5 12 20 12 20Z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 0 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4m8-4v4M4 11h16m-11 4h2m3 0h2m-7 3h2"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="m8 3 3 5-3 3c1 3 2 4 5 5l3-3 5 3c0 3-2 5-4 5C9 20 4 15 3 7c0-2 2-4 5-4Z"/></symbol>
+      <symbol id="i-sound" viewBox="0 0 24 24"><path d="m11 4-6 5H2v6h3l6 5V4Zm4 4a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></symbol>
+      <symbol id="i-muted" viewBox="0 0 24 24"><path d="m11 4-6 5H2v6h3l6 5V4Zm5 5 6 6m0-6-6 6"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+      <symbol id="i-lotus" viewBox="0 0 120 70"><path d="M60 61C30 44 43 17 60 4c17 13 30 40 0 57Zm0 0C34 65 11 43 14 21c25-1 39 13 46 40Zm0 0c26 4 49-18 46-40-25-1-39 13-46 40ZM56 61C22 69 5 53 3 40c19-5 32 5 53 21Zm8 0c34 8 51-8 53-21-19-5-32 5-53 21Z"/></symbol>
+      <clipPath id="heart-clip" clipPathUnits="objectBoundingBox"><path d="M.5 .924C.422 .848 .056 .564 .056 .318C.056 .076 .356 0 .5 .230C.644 0 .944 .076 .944 .318C.944 .564 .578 .848 .5 .924Z"/></clipPath>
+    </defs>
+  </svg>
+
+  <div class="opening" id="opening" role="dialog" aria-modal="true" aria-labelledby="opening-title">
+    <div class="opening-border" aria-hidden="true"></div>
+    <img class="opening-floral floral-a" src="assets/botanicals.svg" alt="">
+    <img class="opening-floral floral-b" src="assets/botanicals.svg" alt="">
+    <div class="opening-inner">
+      <p class="eyebrow">YOU ARE CORDIALLY INVITED</p>
+      <h2 id="opening-title">A little envelope.<br><em>A lifetime of love.</em></h2>
+      <button class="envelope" id="openEnvelope" aria-label="Open Veeral and Tina's wedding invitation. Music will begin after the envelope opens.">
+        <span class="envelope-back"></span>
+        <span class="envelope-letter"><span class="letter-ornament">✦</span><span>Veeral <em>&amp;</em> Tina</span><small>our forever begins</small></span>
+        <span class="envelope-front"></span>
+        <span class="envelope-flap"></span>
+        <span class="wax-seal"><span>V<span class="seal-amp">&amp;</span>T</span></span>
+        <span class="envelope-caption">TO OUR FAVOURITE PEOPLE</span>
+      </button>
+      <div class="opening-instruction"><span class="tap-spark" aria-hidden="true">✧</span><p>Tap the seal to open</p><small>A little music. A little magic.</small></div>
+      <p class="opening-signature">with love, Veeral &amp; Tina</p>
+    </div>
+  </div>
+  <div class="light-spread" id="lightSpread" aria-hidden="true"><div class="light-rays"></div></div>
+  <canvas id="petals" class="petals" aria-hidden="true"></canvas>
+  <canvas id="celebrationCanvas" class="celebration-canvas" aria-hidden="true"></canvas>
+
+  <div id="invitation">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Veeral and Tina, back to top">V<span>&amp;</span>T</a>
+      <nav aria-label="Invitation sections"><a href="#our-date">The date</a><a href="#celebrations">Celebrations</a><a href="#venue">Venue</a><a href="#rsvp">RSVP</a></nav>
+      <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+    </header>
+
+    <main>
+      <section class="hero night" id="home" aria-labelledby="coupleTitle">
+        <div class="hero-stars" aria-hidden="true"></div>
+        <img class="hero-botanical hero-botanical-left" src="assets/botanicals.svg" alt="" data-parallax="0.09">
+        <img class="hero-botanical hero-botanical-right" src="assets/botanicals.svg" alt="" data-parallax="-0.06">
+        <div class="hero-layout wrap">
+          <div class="hero-copy">
+            <p class="eyebrow hero-enter">TOGETHER WITH OUR FAMILIES</p>
+            <h1 id="coupleTitle" class="hero-enter" tabindex="-1"><span>Veeral</span><em>&amp;</em><span>Tina</span></h1>
+            <div class="fine-rule hero-enter"><span>✧</span></div>
+            <p class="hero-message hero-enter">Two hearts. One beautiful beginning.<br>And you, a part of our forever.</p>
+            <p class="location-label hero-enter">GREATER NOIDA · UTTAR PRADESH</p>
+            <a class="text-link hero-enter" href="#our-date">Uncover our wedding date <svg class="icon"><use href="#i-down"/></svg></a>
+          </div>
+          <div class="hero-portrait hero-enter">
+            <div class="portrait-arch"><img src="assets/couple-4.jpeg" alt="Veeral and Tina smiling at one another in traditional attire" fetchpriority="high" width="1024" height="1536"></div>
+            <div class="portrait-ring" aria-hidden="true"></div>
+            <span class="portrait-caption">the beginning of always</span>
+            <span class="portrait-star star-one" aria-hidden="true">✧</span><span class="portrait-star star-two" aria-hidden="true">✧</span>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#our-date"><span>SCROLL INTO OUR STORY</span><span class="scroll-line"></span></a>
+      </section>
+
+      <section class="date-section paper" id="our-date" aria-labelledby="dateTitle">
+        <img class="date-floral" src="assets/botanicals.svg" alt="" data-parallax=".06">
+        <div class="date-layout wrap">
+          <div class="date-copy" data-reveal="left">
+            <p class="eyebrow">A LITTLE SURPRISE, JUST FOR YOU</p>
+            <h2 id="dateTitle">A date written<br><em>in our hearts.</em></h2>
+            <p class="body-copy">Every love story has a special day.<br>Scratch the heart and discover ours.</p>
+            <div class="little-flourish" aria-hidden="true">✧ <span></span> ✧</div>
+          </div>
+          <div class="scratch-block" data-reveal="zoom">
+            <div class="scratch-heart" id="scratchHeart">
+              <div class="heart-date" id="revealedDate" aria-hidden="true"><span class="heart-kicker">OUR WEDDING DAY</span><strong>02</strong><span class="heart-month">December</span><span class="heart-year">2026</span></div>
+              <canvas id="scratchCanvas" width="720" height="660" aria-label="Scratchable heart. Drag your finger or mouse over it to reveal the wedding date." role="img"></canvas>
+              <svg class="heart-outline" viewBox="0 0 360 330" aria-hidden="true"><path d="M180 305C152 280 20 186 20 105C20 25 128 0 180 76C232 0 340 25 340 105C340 186 208 280 180 305Z"/></svg>
+            </div>
+            <p class="scratch-hint" id="scratchHint"><svg class="icon"><use href="#i-heart"/></svg> Scratch with your finger or mouse</p>
+            <button class="quiet-button" id="revealDate">Or tap to reveal the date</button>
+            <p class="sr-only" role="status" id="dateAnnouncement"></p>
+          </div>
+        </div>
+        <div class="date-after" id="dateAfter" hidden>
+          <p class="eyebrow">LET THE CELEBRATIONS BEGIN</p>
+          <p class="celebration-dates">1st &amp; 2nd December 2026</p>
+          <a class="button button-maroon" href="assets/Veeral-and-Tina-Wedding.ics" download><svg class="icon"><use href="#i-calendar"/></svg> Save the dates</a>
+        </div>
+        <div class="countdown-wrap wrap" data-reveal="up">
+          <p class="countdown-heading" id="countdownHeading">Every moment brings us closer</p>
+          <div class="countdown" aria-label="Countdown to 2 December 2026, midnight India Standard Time">
+            <div><strong id="days">00</strong><span>DAYS</span></div><b aria-hidden="true">:</b>
+            <div><strong id="hours">00</strong><span>HOURS</span></div><b aria-hidden="true">:</b>
+            <div><strong id="minutes">00</strong><span>MINUTES</span></div><b aria-hidden="true">:</b>
+            <div><strong id="seconds">00</strong><span>SECONDS</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="together night" id="together" aria-labelledby="togetherTitle">
+        <div class="together-layout wrap">
+          <div class="together-photo" data-reveal="tilt"><img src="assets/couple-5.jpeg" alt="Veeral and Tina celebrating together" loading="lazy" width="1024" height="1536"><span>two hearts, one journey</span></div>
+          <div class="together-copy" data-reveal="right">
+            <svg class="lotus" aria-hidden="true"><use href="#i-lotus"/></svg>
+            <p class="eyebrow">WITH THE BLESSINGS OF OUR FAMILIES</p>
+            <h2 id="togetherTitle">A love to cherish.<br><em>A life to share.</em></h2>
+            <p class="body-copy">Different stories, one beautiful beginning. We invite you to celebrate love, family, laughter and the start of a new chapter together.</p>
+            <div class="families">
+              <div class="family"><p class="family-role">THE GROOM</p><h3>Veeral Sharma</h3><p class="parents">Son of<br><span>Mr. Manish Sharma</span><br>&amp; <span>Mrs. Rekha Sharma</span></p></div>
+              <span class="family-amp" aria-hidden="true">&amp;</span>
+              <div class="family"><p class="family-role">THE BRIDE</p><h3>Tina Sharma</h3><p class="parents">Daughter of<br><span class="blank-name" id="brideFather"></span><span class="blank-name" id="brideMother"></span></p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="celebrations paper" id="celebrations" aria-labelledby="celebrationsTitle">
+        <div class="celebrations-layout wrap">
+          <div class="celebrations-intro" data-reveal="up">
+            <p class="eyebrow">THE CELEBRATION</p>
+            <h2 id="celebrationsTitle">Two days.<br><em>A lifetime<br>of memories.</em></h2>
+            <p class="body-copy">Come for the rituals.<br>Stay for the laughter.<br>Dance with us into forever.</p>
+            <div class="event-days"><span>01</span><i>&amp;</i><span>02</span><small>DECEMBER 2026</small></div>
+            <svg class="lotus" aria-hidden="true"><use href="#i-lotus"/></svg>
+          </div>
+          <div class="event-stack">
+            <article class="event-sheet day-sheet" data-reveal="up">
+              <header class="event-sheet-header"><span class="chapter-number">01</span><div><p class="eyebrow">TUESDAY · 1 DECEMBER 2026</p><h3>A beautiful beginning</h3><p class="event-subtitle">DAY FUNCTIONS · ROSETTE HALL</p></div></header>
+              <div class="event-row"><span class="event-dot" aria-hidden="true">✧</span><div><h4>Sagai</h4><p>Rosette Hall</p></div><time>9:00 AM<span>onwards</span></time></div>
+              <div class="event-row"><span class="event-dot" aria-hidden="true">✧</span><div><h4>Lunch</h4><p>Rosette Hall</p></div><time>1:15 PM<span>onwards</span></time></div>
+              <div class="event-row"><span class="event-dot" aria-hidden="true">✧</span><div><h4>Haldi &amp; Mehendi</h4><p>Rosette Hall</p></div><time>1:30 PM<span>onwards</span></time></div>
+              <p class="sheet-footer">A little colour. A whole lot of love.</p>
+            </article>
+            <article class="event-sheet sangeet-sheet night" data-reveal="up">
+              <div class="sangeet-stars" aria-hidden="true">✧<span>✦</span>✧</div>
+              <p class="eyebrow">TUESDAY · 1 DECEMBER 2026</p><h3>A night to<br><em>remember.</em></h3>
+              <div class="sangeet-name">Sangeet</div><p class="sangeet-time">6:30 PM onwards</p><p class="event-subtitle">CLUB NOIR</p>
+              <div class="fine-rule"><span>✧</span></div><p class="sheet-footer">Bring your best moves. We'll bring the magic.</p>
+            </article>
+            <article class="event-sheet wedding-sheet" data-reveal="up">
+              <header class="event-sheet-header"><span class="chapter-number">02</span><div><p class="eyebrow">WEDNESDAY · 2 DECEMBER 2026</p><h3>Our happily ever after</h3><p class="event-subtitle">THE WEDDING DAY</p></div></header>
+              <div class="event-row"><span class="event-dot" aria-hidden="true">✧</span><div><h4>Ghurchari</h4><p>Miraya Crown Hotel Entrance</p></div><time>4:00 PM</time></div>
+              <div class="event-row"><span class="event-dot" aria-hidden="true">✧</span><div><h4>Chadhat</h4><p>Miraya Crown Hotel Entrance</p></div><time>5:30 PM</time></div>
+              <div class="event-row"><span class="event-dot" aria-hidden="true">✧</span><div><h4>Baraat</h4><p>Miraya Crown Hotel Entrance</p></div><time>8:00 PM</time></div>
+              <div class="event-row ceremony-row"><span class="event-dot" aria-hidden="true">✧</span><div><h4>Wedding Ceremony</h4><p>Celeste Hall</p><p class="pending-time">Pheras / Muhurat — To be updated</p></div></div>
+              <div class="event-row"><span class="event-dot" aria-hidden="true">✧</span><div><h4>Dinner</h4><p>Celeste Hall</p></div><time>8:00 PM<span>onwards</span></time></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="memories night" id="memories" aria-labelledby="memoriesTitle">
+        <div class="wrap gallery-heading" data-reveal="up"><div><p class="eyebrow">THE LITTLE MOMENTS, THE BIG FEELINGS</p><h2 id="memoriesTitle">Always <em>better together.</em></h2></div><div class="gallery-controls"><button class="circle-button" id="galleryPrev" aria-label="Previous photographs"><svg class="icon flip"><use href="#i-arrow"/></svg></button><button class="circle-button" id="galleryNext" aria-label="Next photographs"><svg class="icon"><use href="#i-arrow"/></svg></button></div></div>
+        <div class="gallery-track" id="galleryTrack" aria-label="Photograph gallery. Swipe or use the arrow buttons.">
+          <button class="memory-photo" data-photo="0" data-reveal="tilt" aria-label="Enlarge Veeral and Tina's photograph, 1 of 4"><img src="assets/couple-1.jpeg" alt="Veeral and Tina together in matching yellow" loading="lazy" width="1152" height="1536"><span>our kind of happiness</span></button>
+          <button class="memory-photo" data-photo="1" data-reveal="tilt" aria-label="Enlarge Veeral and Tina's photograph, 2 of 4"><img src="assets/couple-2.jpeg" alt="Veeral and Tina during a day out" loading="lazy" width="1152" height="1536"><span>a world to explore, together</span></button>
+          <button class="memory-photo" data-photo="2" data-reveal="tilt" aria-label="Enlarge Veeral and Tina's photograph, 3 of 4"><img src="assets/couple-3.jpeg" alt="Veeral and Tina on an evening out" loading="lazy" width="1152" height="1536"><span>you, me &amp; everything in between</span></button>
+          <button class="memory-photo memory-wide" data-photo="3" data-reveal="tilt" aria-label="Enlarge Veeral and Tina's photograph, 4 of 4"><img src="assets/couple-6.jpeg" alt="Veeral and Tina smiling together at their celebration" loading="lazy" width="1536" height="1024"><span>and so, our forever begins</span></button>
+        </div><p class="gallery-note">SWIPE THROUGH OUR MEMORIES · TAP A PHOTO TO VIEW</p>
+      </section>
+
+      <section class="venue-section paper" id="venue" aria-labelledby="venueTitle">
+        <img class="venue-botanical" src="assets/botanicals.svg" alt="" data-parallax=".07">
+        <div class="wrap venue-layout">
+          <div class="venue-copy" data-reveal="left"><p class="eyebrow">MEET US WHERE FOREVER BEGINS</p><h2 id="venueTitle">One place.<br><em>So many memories.</em></h2><p class="body-copy">Your journey to our celebration<br>begins right here.</p><svg class="lotus" aria-hidden="true"><use href="#i-lotus"/></svg></div>
+          <div class="venue-ticket" data-reveal="right"><p class="eyebrow">THE WEDDING VENUE</p><svg class="venue-pin" aria-hidden="true"><use href="#i-pin"/></svg><h3>Miraya Crown<br>Banquet</h3><p class="address">PKS Town Central, Sec 16B Road,<br>Greater Noida West,<br>Uttar Pradesh – 201308</p><div class="ticket-divider"></div><a class="button button-maroon" href="https://maps.app.goo.gl/Ef64K62aVrKzBbAX8?g_st=ic" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-pin"/></svg> Get directions <svg class="icon"><use href="#i-arrow"/></svg></a><a class="text-link venue-call" href="tel:+917017710317">Need a hand? Call Vaibhav <svg class="icon"><use href="#i-phone"/></svg></a></div>
+        </div>
+      </section>
+
+      <section class="final-section night" id="rsvp" aria-labelledby="finalTitle">
+        <img class="final-floral final-floral-left" src="assets/botanicals.svg" alt=""><img class="final-floral final-floral-right" src="assets/botanicals.svg" alt="">
+        <div class="final-inner" data-reveal="zoom"><svg class="lotus" aria-hidden="true"><use href="#i-lotus"/></svg><p class="eyebrow">COME BLESS OUR BEGINNING</p><h2 id="finalTitle">Your presence.<br><em>Our greatest gift.</em></h2><p class="body-copy">Your love, blessings and presence will make our celebration even more special. We can't wait to celebrate this beautiful new chapter with our favourite people.</p><div class="final-names">Veeral <em>&amp;</em> Tina</div><p class="final-date">1st – 2nd December 2026 · Greater Noida</p>
+          <div class="love-moment">
+            <button class="button love-button" id="celebrateLove" aria-describedby="celebrationHint">
+              <svg class="icon"><use href="#i-heart"/></svg>
+              <span>Shower us with love</span><span class="love-spark" aria-hidden="true">✦</span>
+            </button>
+            <p class="celebration-hint" id="celebrationHint">Tap for a little celebration</p>
+            <p class="celebration-message" id="celebrationMessage" role="status" aria-live="polite"></p>
+          </div>
+          <div class="rsvp-box"><p class="eyebrow">KINDLY RSVP</p><h3>Vaibhav Kumar</h3><a class="rsvp-phone" href="tel:+917017710317">7017710317</a><div class="rsvp-actions"><a class="button button-gold" href="tel:+917017710317"><svg class="icon"><use href="#i-phone"/></svg> Call</a><a class="button button-outline" href="https://wa.me/917017710317?text=Hi%20Vaibhav%2C%20we%20would%20love%20to%20RSVP%20for%20Veeral%20%26%20Tina%27s%20wedding." target="_blank" rel="noopener noreferrer">WhatsApp <svg class="icon"><use href="#i-arrow"/></svg></a></div></div><p class="with-love">Let’s celebrate, together.</p><button class="quiet-button replay" id="replayInvitation">Open the invitation again <span aria-hidden="true">↺</span></button></div>
+      </section>
+    </main>
+
+    <button class="music-button" id="musicButton" aria-label="Mute music" aria-pressed="false"><svg class="icon sound-on"><use href="#i-sound"/></svg><svg class="icon sound-off"><use href="#i-muted"/></svg><span id="musicLabel">Music on</span><span class="equalizer" aria-hidden="true"><i></i><i></i><i></i></span></button>
+    <p class="audio-notice" id="audioNotice" role="status" hidden></p>
+  </div>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Couple photograph"><button class="circle-button lightbox-close" id="closeLightbox" aria-label="Close photograph"><svg class="icon"><use href="#i-close"/></svg></button><button class="circle-button lightbox-prev" id="photoPrev" aria-label="Previous photograph"><svg class="icon flip"><use href="#i-arrow"/></svg></button><figure><img id="lightboxImage" alt=""><figcaption id="lightboxCaption"></figcaption></figure><button class="circle-button lightbox-next" id="photoNext" aria-label="Next photograph"><svg class="icon"><use href="#i-arrow"/></svg></button></dialog>
+  <audio id="music" preload="auto" loop playsinline src="assets/aaj-sajeya.mp3"></audio>
+  <audio id="magicSound" preload="auto" playsinline src="assets/envelope-magic.mp3"></audio>
+  <noscript><style>.opening,.music-button,.scroll-cue,.love-moment,#scratchCanvas,.scratch-hint,#revealDate{display:none!important}body.sealed{overflow:auto!important}#invitation{visibility:visible!important}.hero-enter,[data-reveal]{opacity:1!important;transform:none!important;filter:none!important}.date-after[hidden]{display:block!important}</style><p class="no-script">Enable JavaScript to open the envelope, scratch the heart, and hear the music. All invitation details are shown below.</p></noscript>
+</body>
+</html>
