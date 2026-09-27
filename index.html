@@ -13,7 +13,7 @@
   <script src="assets/invitation.js" defer></script>
   <script src="assets/celebration.js" defer></script>
 </head>
-<body class="sealed">
+<body class="sealed date-locked">
   <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
@@ -71,8 +71,7 @@
             <h1 id="coupleTitle" class="hero-enter" tabindex="-1"><span>Veeral</span><em>&amp;</em><span>Tina</span></h1>
             <div class="fine-rule hero-enter"><span>✧</span></div>
             <p class="hero-message hero-enter">Two hearts. One beautiful beginning.<br>And you, a part of our forever.</p>
-            <p class="location-label hero-enter">GREATER NOIDA · UTTAR PRADESH</p>
-            <a class="text-link hero-enter" href="#our-date">Uncover our wedding date <svg class="icon"><use href="#i-down"/></svg></a>
+            <a class="text-link date-discover hero-enter" href="#our-date">Uncover our wedding date <svg class="icon"><use href="#i-down"/></svg></a>
           </div>
           <div class="hero-portrait hero-enter">
             <div class="portrait-arch"><img src="assets/couple-4.jpeg" alt="Veeral and Tina smiling at one another in traditional attire" fetchpriority="high" width="1024" height="1536"></div>
@@ -96,18 +95,26 @@
           <div class="scratch-block" data-reveal="zoom">
             <div class="scratch-heart" id="scratchHeart">
               <div class="heart-date" id="revealedDate" aria-hidden="true"><span class="heart-kicker">OUR WEDDING DAY</span><strong>02</strong><span class="heart-month">December</span><span class="heart-year">2026</span></div>
-              <canvas id="scratchCanvas" width="720" height="660" aria-label="Scratchable heart. Drag your finger or mouse over it to reveal the wedding date." role="img"></canvas>
+              <canvas id="scratchCanvas" width="720" height="660" tabindex="0" aria-label="Scratch the heart to reveal the wedding date and unlock our story" aria-describedby="scratchHint scratchKeyboardHelp scratchStatus" role="group"></canvas>
               <svg class="heart-outline" viewBox="0 0 360 330" aria-hidden="true"><path d="M180 305C152 280 20 186 20 105C20 25 128 0 180 76C232 0 340 25 340 105C340 186 208 280 180 305Z"/></svg>
+              <span class="keyboard-brush" id="keyboardBrush" aria-hidden="true" hidden></span>
             </div>
             <p class="scratch-hint" id="scratchHint"><svg class="icon"><use href="#i-heart"/></svg> Scratch with your finger or mouse</p>
-            <button class="quiet-button" id="revealDate">Or tap to reveal the date</button>
+            <p class="scratch-keyboard-help" id="scratchKeyboardHelp">Keyboard: focus the heart, then use the arrow keys to scratch.</p>
+            <div class="scratch-unlock" id="scratchUnlock">
+              <progress id="scratchProgress" value="0" max="100" aria-label="Progress towards unlocking our story"></progress>
+              <p id="scratchStatus">Scratch the heart to unlock the rest of our story</p>
+            </div>
             <p class="sr-only" role="status" id="dateAnnouncement"></p>
           </div>
         </div>
         <div class="date-after" id="dateAfter" hidden>
           <p class="eyebrow">LET THE CELEBRATIONS BEGIN</p>
           <p class="celebration-dates">1st &amp; 2nd December 2026</p>
-          <a class="button button-maroon" href="assets/Veeral-and-Tina-Wedding.ics" download><svg class="icon"><use href="#i-calendar"/></svg> Save the dates</a>
+          <div class="date-actions">
+            <a class="button button-maroon continue-story" id="continueStory" href="#together">Continue our story <svg class="icon"><use href="#i-arrow"/></svg></a>
+            <a class="button button-outline" href="assets/Veeral-and-Tina-Wedding.ics" download><svg class="icon"><use href="#i-calendar"/></svg> Save the dates</a>
+          </div>
         </div>
         <div class="countdown-wrap wrap" data-reveal="up">
           <p class="countdown-heading" id="countdownHeading">Every moment brings us closer</p>
@@ -201,7 +208,7 @@
             <p class="celebration-hint" id="celebrationHint">Tap for a little celebration</p>
             <p class="celebration-message" id="celebrationMessage" role="status" aria-live="polite"></p>
           </div>
-          <div class="rsvp-box"><p class="eyebrow">KINDLY RSVP</p><h3>Vaibhav Sharma</h3><a class="rsvp-phone" href="tel:+917017710317">7017710317</a><div class="rsvp-actions"><a class="button button-gold" href="tel:+917017710317"><svg class="icon"><use href="#i-phone"/></svg> Call</a><a class="button button-outline" href="https://wa.me/917017710317?text=Hi%20Vaibhav%2C%20we%20would%20love%20to%20RSVP%20for%20Veeral%20%26%20Tina%27s%20wedding." target="_blank" rel="noopener noreferrer">WhatsApp <svg class="icon"><use href="#i-arrow"/></svg></a></div></div><p class="with-love">Let’s celebrate, together.</p><button class="quiet-button replay" id="replayInvitation">Open the invitation again <span aria-hidden="true">↺</span></button></div>
+          <div class="rsvp-box"><p class="eyebrow">KINDLY RSVP</p><h3>Vaibhav Kumar</h3><a class="rsvp-phone" href="tel:+917017710317">7017710317</a><div class="rsvp-actions"><a class="button button-gold" href="tel:+917017710317"><svg class="icon"><use href="#i-phone"/></svg> Call</a><a class="button button-outline" href="https://wa.me/917017710317?text=Hi%20Vaibhav%2C%20we%20would%20love%20to%20RSVP%20for%20Veeral%20%26%20Tina%27s%20wedding." target="_blank" rel="noopener noreferrer">WhatsApp <svg class="icon"><use href="#i-arrow"/></svg></a></div></div><p class="with-love">Let’s celebrate, together.</p><button class="quiet-button replay" id="replayInvitation">Open the invitation again <span aria-hidden="true">↺</span></button></div>
       </section>
     </main>
 
@@ -212,6 +219,6 @@
   <dialog class="lightbox" id="lightbox" aria-label="Couple photograph"><button class="circle-button lightbox-close" id="closeLightbox" aria-label="Close photograph"><svg class="icon"><use href="#i-close"/></svg></button><button class="circle-button lightbox-prev" id="photoPrev" aria-label="Previous photograph"><svg class="icon flip"><use href="#i-arrow"/></svg></button><figure><img id="lightboxImage" alt=""><figcaption id="lightboxCaption"></figcaption></figure><button class="circle-button lightbox-next" id="photoNext" aria-label="Next photograph"><svg class="icon"><use href="#i-arrow"/></svg></button></dialog>
   <audio id="music" preload="auto" loop playsinline src="assets/aaj-sajeya.mp3"></audio>
   <audio id="magicSound" preload="auto" playsinline src="assets/envelope-magic.mp3"></audio>
-  <noscript><style>.opening,.music-button,.scroll-cue,.love-moment,#scratchCanvas,.scratch-hint,#revealDate{display:none!important}body.sealed{overflow:auto!important}#invitation{visibility:visible!important}.hero-enter,[data-reveal]{opacity:1!important;transform:none!important;filter:none!important}.date-after[hidden]{display:block!important}</style><p class="no-script">Enable JavaScript to open the envelope, scratch the heart, and hear the music. All invitation details are shown below.</p></noscript>
+  <noscript><style>.opening,.music-button,.scroll-cue,.love-moment,#scratchCanvas,.scratch-hint,.scratch-keyboard-help,.scratch-unlock{display:none!important}body.sealed{overflow:auto!important}#invitation{visibility:visible!important}.hero-enter,[data-reveal]{opacity:1!important;transform:none!important;filter:none!important}.date-after[hidden]{display:block!important}</style><p class="no-script">Enable JavaScript to open the envelope, scratch the heart, and hear the music. All invitation details are shown below.</p></noscript>
 </body>
 </html>
